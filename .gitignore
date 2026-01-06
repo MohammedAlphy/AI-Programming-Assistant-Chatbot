@@ -1,0 +1,121 @@
+# .gitignore for Web-based AI Chatbot Project
+
+# ======================
+# OPERATING SYSTEM FILES
+# ======================
+.DS_Store                # macOS folder settings
+Thumbs.db                # Windows thumbnail cache
+desktop.ini              # Windows folder customizations
+*.lnk                    # Windows shortcuts
+
+# ===============
+# IDE & EDITOR FILES
+# ===============
+.vscode/                 # Visual Studio Code settings
+.idea/                   # JetBrains IDE (PyCharm, WebStorm)
+*.swp                    # Vim swap files
+*.swo                    # Vim swap files
+*.swn                    # Vim swap files
+*.vs/                    # Visual Studio
+.project                 # Eclipse
+.classpath               # Eclipse
+.settings/               # Eclipse
+*.code-workspace         # VS Code workspace
+
+# ===============
+# PYTHON (For future Python backend)
+# ===============
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# ===============
+# NODE.JS (For future Node.js backend)
+# ===============
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+
+# ===============
+# VIRTUAL ENVIRONMENTS
+# ===============
+venv/
+env/
+ENV/
+venv*/
+env*/
+.venv/
+.virtualenv/
+
+# ===============
+# LOGS
+# ===============
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# ===============
+# TESTING
+# ===============
+coverage/
+.nyc_output/
+
+# ===============
+# MISC
+# ===============
+*.tgz
+.yarn/
+.yarnrc.yml
+.pnp.*
+*.tsbuildinfo
+.next/
+.out/
+.nuxt/
+.cache/
+.parcel-cache/
+
+# ===============
+# ENVIRONMENT VARIABLES
+# ===============
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env*.local
+
+# ===============
+# NOTE: We ARE tracking these (DO NOT ignore):
+# ===============
+# !index.html          # ← KEEP THIS
+# !style.css           # ← KEEP THIS  
+# !script.js           # ← KEEP THIS
+# !intents.json        # ← KEEP THIS
+# !*.png               # ← KEEP screenshots
+# !*.jpg               # ← KEEP images
+# !README.md           # ← KEEP documentation
