@@ -38,7 +38,7 @@ Frontend (Browser)
 ## 🚀 Quick Start
 
 ### Option 1: Live Demo
-Simply visit the [GitHub Pages link](your-github-pages-link) - no installation needed!
+Simply visit the [GitHub Pages link](https://mohammedalphy.github.io/AI-Programming-Assistant-Chatbot/) - no installation needed!
 
 ### Option 2: Local Installation
 ```bash
