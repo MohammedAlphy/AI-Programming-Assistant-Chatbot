@@ -12,7 +12,7 @@ A fully functional, web-based chatbot trained to answer questions about Artifici
 
 ## 🎯 Live Demo
 
-**[Try the Chatbot Live!](your-github-pages-link)** - No installation needed!
+**[Try the Chatbot Live!](mohammedalphy.github.io.)** - No installation needed!
 
 ![Chatbot Screenshot](demo-screenshot.png)
 
