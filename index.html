@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Programming Chatbot</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">
+                <i class="fas fa-robot"></i>
+                <h1>AI Programming Assistant</h1>
+            </div>
+            <div class="header-info">
+                <span class="tag">Beta</span>
+                <div class="theme-toggle">
+                    <i class="fas fa-moon" id="theme-icon"></i>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Sidebar with FAQ Topics -->
+            <aside class="sidebar">
+                <div class="sidebar-header">
+                    <h3><i class="fas fa-star"></i> Quick Questions</h3>
+                    <p>Click any question to ask the bot</p>
+                </div>
+                <div class="topic-list">
+                    <div class="topic-category">
+                        <h4>AI Basics</h4>
+                        <div class="topic-item" data-question="What is Artificial Intelligence?">
+                            <i class="fas fa-brain"></i>
+                            <span>What is AI?</span>
+                        </div>
+                        <div class="topic-item" data-question="What's the difference between AI, Machine Learning, and Deep Learning?">
+                            <i class="fas fa-project-diagram"></i>
+                            <span>AI vs ML vs DL</span>
+                        </div>
+                        <div class="topic-item" data-question="What are neural networks?">
+                            <i class="fas fa-network-wired"></i>
+                            <span>Neural Networks</span>
+                        </div>
+                    </div>
+
+                    <div class="topic-category">
+                        <h4>Learning Path</h4>
+                        <div class="topic-item" data-question="What should I study to learn AI programming?">
+                            <i class="fas fa-graduation-cap"></i>
+                            <span>How to start?</span>
+                        </div>
+                        <div class="topic-item" data-question="What Python libraries are essential for AI/ML?">
+                            <i class="fab fa-python"></i>
+                            <span>Python Libraries</span>
+                        </div>
+                        <div class="topic-item" data-question="How long does it take to learn AI programming?">
+                            <i class="fas fa-clock"></i>
+                            <span>Learning Time</span>
+                        </div>
+                    </div>
+
+                    <div class="topic-category">
+                        <h4>Technical</h4>
+                        <div class="topic-item" data-question="What is TensorFlow vs PyTorch?">
+                            <i class="fas fa-code"></i>
+                            <span>TensorFlow vs PyTorch</span>
+                        </div>
+                        <div class="topic-item" data-question="What are some beginner AI projects I can build?">
+                            <i class="fas fa-laptop-code"></i>
+                            <span>Beginner Projects</span>
+                        </div>
+                        <div class="topic-item" data-question="How do I deploy an AI model?">
+                            <i class="fas fa-rocket"></i>
+                            <span>Model Deployment</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="sidebar-footer">
+                    <div class="bot-status">
+                        <div class="status-indicator online"></div>
+                        <span>Bot Status: Online</span>
+                    </div>
+                    <div class="message-count">
+                        <i class="fas fa-comments"></i>
+                        <span id="message-counter">0 messages</span>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Chat Area -->
+            <section class="chat-container">
+                <!-- Chat Header -->
+                <div class="chat-header">
+                    <div class="chat-bot-info">
+                        <div class="bot-avatar">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <div>
+                            <h2>AI Programming Assistant</h2>
+                            <p class="bot-subtitle">Ask me anything about AI, Machine Learning, and Programming</p>
+                        </div>
+                    </div>
+                    <div class="chat-actions">
+                        <button id="clear-chat" class="btn-icon" title="Clear Chat">
+                            <i class="fas fa-trash-alt"></i>
+                        </button>
+                        <button id="help-btn" class="btn-icon" title="Help">
+                            <i class="fas fa-question-circle"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Chat Messages Area -->
+                <div class="chat-messages" id="chat-messages">
+                    <!-- Welcome Message -->
+                    <div class="message bot-message">
+                        <div class="message-content">
+                            <div class="message-header">
+                                <i class="fas fa-robot"></i>
+                                <span class="message-sender">AI Assistant</span>
+                                <span class="message-time">Just now</span>
+                            </div>
+                            <div class="message-text">
+                                <p>👋 Hello! I'm your AI Programming Assistant.</p>
+                                <p>I can help you with:</p>
+                                <ul>
+                                    <li>AI & Machine Learning concepts</li>
+                                    <li>Learning paths and resources</li>
+                                    <li>Programming languages & libraries</li>
+                                    <li>Project ideas and deployment</li>
+                                </ul>
+                                <p>Try clicking a question on the left or type your own below!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Chat Input Area -->
+                <div class="chat-input-area">
+                    <div class="input-container">
+                        <input 
+                            type="text" 
+                            id="user-input" 
+                            placeholder="Ask about AI programming..." 
+                            autocomplete="off"
+                        >
+                        <div class="input-actions">
+                            <button id="send-btn" class="btn-send">
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                            <button id="voice-btn" class="btn-icon" title="Voice Input">
+                                <i class="fas fa-microphone"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="input-hints">
+                        <span class="hint">Try asking: </span>
+                        <span class="hint-tag" data-question="What is Natural Language Processing?">What is NLP?</span>
+                        <span class="hint-tag" data-question="How do I get datasets for AI projects?">Finding datasets</span>
+                        <span class="hint-tag" data-question="What math is needed for AI?">Math for AI</span>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <p>AI Programming Chatbot • Powered by your intents.json data</p>
+                <div class="footer-links">
+                    <a href="#" id="export-chat">Export Chat</a>
+                    <span>•</span>
+                    <a href="#" id="reset-bot">Reset Bot</a>
+                    <span>•</span>
+                    <a href="#" id="about-btn">About</a>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- JavaScript Files -->
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest/dist/tf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/natural@latest/dist/natural.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
