@@ -32,7 +32,7 @@ This project adheres to a **Code of Conduct** that all contributors are expected
 1. **Fork** the repository
 2. **Clone** your fork:
    ```bash
-   git clone https://github.com/YOUR-USERNAME/ai-programming-chatbot.git
+   git clone https://github.com/MohammedAlphy/AI-Programming-Assistant-Chatbot.git
    cd ai-programming-chatbot
    ```
 3. **Open** `index.html` in your browser to test
