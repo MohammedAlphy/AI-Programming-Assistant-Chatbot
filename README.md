@@ -43,7 +43,7 @@ Simply visit the [GitHub Pages link](https://mohammedalphy.github.io/AI-Programm
 ### Option 2: Local Installation
 ```bash
 # Clone the repository
-git clone https://github.com/yourusername/ai-programming-chatbot.git
+git clone https://github.com/MohammedAlphy/AI-Programming-Assistant-Chatbot.git
 cd ai-programming-chatbot
 
 # Open in browser (no server needed!)
